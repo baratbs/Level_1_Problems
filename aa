@@ -1,0 +1,265 @@
+11:Get a two-digit number from user and print sum the digits.
+
+#include<stdio.h>
+
+int add(int * p_given_number);
+
+int given_number[2],result;
+
+int main(){
+
+printf("Give any two digit number:\n ");
+
+for(int i=0;i<2;i++){
+	scanf("%d",&given_number[i]);
+}
+
+result=add(given_number);
+
+printf("%d\n",result);
+}
+
+int add(int * p_given_number){
+
+		result=*p_given_number;
+		p_given_number++;
+		result=*p_given_number+result;
+		return result;
+	}
+	
+	
+	
+2:Get a three-digit number from user and print sum the digits.
+
+
+#include<stdio.h>
+
+#define p(x) printf("%d\n",x);
+
+int add(int * p_given_number);
+
+int given_number[3],result;
+
+int main(){
+    
+    
+printf("Give any two digit number:\n ");
+
+for(int i=0;i<3;i++){
+	scanf("%d",&given_number[i]);
+}
+
+for(int i=0;i<3;i++){
+    printf("%d",given_number[i]);
+}
+
+printf("\n");
+
+
+
+result=add(given_number);
+
+printf("%d\n",result);
+}
+
+int add(int * p_given_number){
+
+		result=*p_given_number;
+		p_given_number++;
+		result=*p_given_number+result;
+		p_given_number++;
+		result=*p_given_number+result;
+		p(*p_given_number);
+		p(result);
+		return result;
+	}
+	
+13:Get a two-digit number from user and print the reverse of the number.
+
+#include<stdio.h>
+
+void reverse(int *p_given_number);
+
+int given_number[2];
+int result;
+
+int main(){
+
+printf("Give me a two digit number:\n");
+
+for(char i=0;i<2;i++){
+	scanf("%d",&given_number[i]);
+}
+
+printf("\n");
+
+reverse(given_number);
+
+for(char i=0;i<2;i++){
+    printf("%d",given_number[i]);
+}
+}
+
+void reverse(int *p_given_number){
+	char temp1,temp2;
+	temp1=*p_given_number;
+	p_given_number++;
+	temp2=*p_given_number;
+	*p_given_number=temp1;
+	*p_given_number--;
+	*p_given_number=temp2;
+}
+ 
+ 
+14:Get a three-digit number from user and print the reverse of the number.
+
+#include<stdio.h>
+void reverse(int *p_given_number);
+
+int given_number[3];
+
+int main(){
+
+printf("Give me any three digit number:\n");
+
+for(char i=0;i<3;i++){
+	scanf("%d",&given_number[i]);
+}
+
+reverse(&given_number[2]);
+
+
+}
+
+void reverse(int *p_given_number){
+	int f_given_number[2];
+	
+	
+for(char i=0;i<3;i++){
+	f_given_number[i]=*p_given_number;
+	p_given_number--;
+}
+
+for(char i=0;i<3;i++){
+	printf("%d",f_given_number[i]);
+}
+}
+
+15:Get a four-digit number from user and only reverse the
+first two digits of the number, then print the number.
+
+#include<stdio.h>
+
+void change(int* P_given_number,int number);
+
+int given_number[4];
+char first_num,last_num;
+int main(){
+
+printf("Give me a four-digit number: ");
+
+ for(char i=0;i<4;i++){
+ 	scanf("%d",&given_number[i]);
+ }
+first_num=given_number[3];
+last_num=given_number[0];
+
+change(&given_number[0],first_num);
+
+change(&given_number[3],last_num);
+
+ for(char i=0;i<4;i++){
+ 	printf("%d",given_number[i]);
+ }
+}
+
+void change(int* p_given_number,int number){
+	*p_given_number=number;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
