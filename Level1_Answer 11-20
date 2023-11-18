@@ -213,6 +213,57 @@ a_given_number--;
 *a_given_number=third;
 }
 
+17-Get a two-digit number from user and make the one’s digit as 0,
+then print it.
+
+#include<stdio.h>
+
+#define typedef_fp
+//function and Function Pointer Declaration
+
+char zero(char);
+
+#ifdef typedef_fp
+typedef char (*fun_ptr)(char);
+fun_ptr fp;
+#else
+char (*fun_ptr)(char);
+#endif
+
+int main(){
+
+char given_number;
+
+
+printf("Give me a number: ");
+
+scanf("%d",&given_number);
+
+#ifdef typedef_fp
+fp=zero;
+given_number=fp(given_number);
+#else
+
+fun_ptr=zero;
+
+//Invoke the zero funtion
+
+given_number=(*fun_ptr)(given_number);
+
+#endif
+
+printf("%d\n",given_number);
+}
+
+char zero(char given_number){
+
+char temp;
+given_number=(given_number%10)-given_number;
+given_number*=-1;
+return given_number;
+}
+
+
 
 
 
